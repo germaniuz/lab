@@ -8,4 +8,5 @@
 using namespace std;
 
 string options();
+int nextStep();
 #endif //COLLEGE_OPTIONS_H

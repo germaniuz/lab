@@ -10,10 +10,6 @@
 
 using namespace std;
 
-bool validateActionInput(const string& input) {
-    return isInt(input) && (stoi(input) == 1 || stoi(input) == 2 || stoi(input) == 3);
-}
-
 int main() {
     bool runService = true;
     map <string, function<void()>> modules;
@@ -22,24 +18,17 @@ int main() {
     modules["lab7"] = &lab7;
     modules["lab8"] = &lab8;
     string option;
-    string actionInput;
-    bool validation;
+    int actionInput;
 
     do {
         option = options();
         modules[option]();
-        cout << "Введите" << endl << "1 - выйти в главное меню" << endl << "2 - повторить тест" << endl << "0 - выйти из программы" << endl;
-        cout << "Ваш выбор: ";
-        cin >> actionInput;
-        validation = validateActionInput(actionInput);
-        while (!validation) {
-            cout << "Неверный ввод, повторите: ";
-            cin >> actionInput;
-            validation = validateActionInput(actionInput);
-        };
-
-        if (stoi(actionInput) == 0) {
-            cout << "Спасибо за внимание";
+        actionInput = nextStep();
+        while (actionInput == 2) {
+            modules[option]();
+            actionInput = nextStep();
+        }
+        if (actionInput == 0) {
             runService = false;
         }
     } while(runService);

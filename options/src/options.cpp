@@ -25,6 +25,10 @@ bool validateOption(const string& option) {
     return isInt(option) && stoi(option) >= labNumberShift && stoi(option) < labList.size() + labNumberShift;
 }
 
+bool validateNextStepInput(const string& input) {
+    return isInt(input) && (stoi(input) == 0 || stoi(input) == 1 || stoi(input) == 2);
+}
+
 string getOptionFormUser(string option) {
     cout << "Номер: ";
     cin >> option;
@@ -47,4 +51,29 @@ string options() {
     }
 
     return "lab" + getOptionFormUser(userInput);
+}
+
+int nextStep() {
+    string actionInput;
+
+    cout << "Введите" << endl << "1 - выйти в главное меню" << endl << "2 - повторить тест" << endl << "0 - выйти из программы" << endl;
+    cout << "Ваш выбор: ";
+
+    cin >> actionInput;
+
+    bool validation = validateNextStepInput(actionInput);
+
+    while (!validation) {
+        cout << "Неверный ввод, повторите: ";
+        cin >> actionInput;
+        validation = validateNextStepInput(actionInput);
+    };
+
+    if (stoi(actionInput) == 0) {
+        cout << "Спасибо за внимание";
+
+        return 0;
+    }
+
+    return stoi(actionInput);
 }

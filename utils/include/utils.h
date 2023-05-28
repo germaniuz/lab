@@ -7,5 +7,6 @@
 using namespace std;
 
 bool isInt(string option);
+bool isDouble(string option);
 
 #endif //COLLEGE_UTILS_H

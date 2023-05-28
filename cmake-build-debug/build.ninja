@@ -91,6 +91,12 @@ build CMakeFiles/college.dir/utils/src/utils.cpp.o: CXX_COMPILER__college_Debug 
   OBJECT_DIR = CMakeFiles/college.dir
   OBJECT_FILE_DIR = CMakeFiles/college.dir/utils/src
 
+build CMakeFiles/college.dir/lab17/lab17.cpp.o: CXX_COMPILER__college_Debug /Users/german/education-projects/college/lab17/lab17.cpp || cmake_object_order_depends_target_college
+  DEP_FILE = CMakeFiles/college.dir/lab17/lab17.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.6 -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/college.dir
+  OBJECT_FILE_DIR = CMakeFiles/college.dir/lab17
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target college
@@ -99,7 +105,7 @@ build CMakeFiles/college.dir/utils/src/utils.cpp.o: CXX_COMPILER__college_Debug 
 #############################################
 # Link the executable college
 
-build college: CXX_EXECUTABLE_LINKER__college_Debug CMakeFiles/college.dir/main.cpp.o CMakeFiles/college.dir/lab5/src/lab5.cpp.o CMakeFiles/college.dir/options/src/options.cpp.o CMakeFiles/college.dir/lab8/src/lab8.cpp.o CMakeFiles/college.dir/lab6/src/lab6.cpp.o CMakeFiles/college.dir/lab7/src/lab7.cpp.o CMakeFiles/college.dir/utils/src/utils.cpp.o
+build college: CXX_EXECUTABLE_LINKER__college_Debug CMakeFiles/college.dir/main.cpp.o CMakeFiles/college.dir/lab5/src/lab5.cpp.o CMakeFiles/college.dir/options/src/options.cpp.o CMakeFiles/college.dir/lab8/src/lab8.cpp.o CMakeFiles/college.dir/lab6/src/lab6.cpp.o CMakeFiles/college.dir/lab7/src/lab7.cpp.o CMakeFiles/college.dir/utils/src/utils.cpp.o CMakeFiles/college.dir/lab17/lab17.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.6
   OBJECT_DIR = CMakeFiles/college.dir
   POST_BUILD = :

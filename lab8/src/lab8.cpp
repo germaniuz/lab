@@ -15,12 +15,16 @@ void printResult(double x, double result) {
 }
 
 void lab8() {
+    cout << "=================" << endl;
+    cout << "Лабораторная работа №6" << endl;
+
     int a = 3;
     double range[] = {-2.0, 8.0};
     double x = range[0];
     const double DELTA_X = 0.6;
 
-    cout << "Результат вычисления" << endl;
+    cout << "-----------------------" << endl;
+    cout << "Результат:" << endl;
 
     while(x <= range[1]) {
         double result = calcFunction(x, a);

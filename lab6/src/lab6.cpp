@@ -1,15 +1,25 @@
 #include <iostream>
 #include <string>
+#include "../../utils/include/utils.h"
 
 using namespace std;
 
 void lab6() {
-    cout << "----------------------" << endl;
+    cout << "=================" << endl;
     cout << "Лабораторная работа №6" << endl;
     int age;
+    string userInput;
     string ageString;
-    cout << "Введите возраст в диапазоне от 20 до 49 лет включительно: " << endl;
-    cin >> age;
+
+    cout << "Введите возраст в диапазоне от 20 до 49 лет включительно: ";
+    cin >> userInput;
+
+    while(!isInt(userInput)) {
+        cout << "Неверный тип. Введите возраст: ";
+        cin >> userInput;
+    }
+
+    age = stoi(userInput);
 
     int lastAgeDigit = age % 10;
 
@@ -27,5 +37,7 @@ void lab6() {
             break;
     }
 
+    cout << "-----------------------" << endl;
+    cout << "Результат:" << endl;
     cout << age << " " << ageString << endl;
 }
