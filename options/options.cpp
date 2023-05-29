@@ -4,7 +4,7 @@
 #include <iostream>
 #include <map>
 #include <string>
-#include "../../utils/include/utils.h"
+#include "../utils/utils.h"
 
 using namespace std;
 
@@ -16,7 +16,7 @@ string labNum(int iterator) {
 }
 
 void createList() {
-    for (int i = 0; i < 11; i++) {
+    for (int i = 0; i < 14; i++) {
         labList["lab" + labNum(i)] = "Лабораторная №" + labNum(i);
     }
 }
@@ -56,7 +56,7 @@ string options() {
 int nextStep() {
     string actionInput;
 
-    cout << "Введите" << endl << "1 - выйти в главное меню" << endl << "2 - повторить тест" << endl << "0 - выйти из программы" << endl;
+    cout << "Введите" << endl << "1 - выйти в главное меню" << endl << "2 - повторить выбранную лабораторную работу" << endl << "0 - выйти из программы" << endl;
     cout << "Ваш выбор: ";
 
     cin >> actionInput;

@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include "../utils/utils.h"
 
 using namespace std;
 
@@ -8,10 +9,6 @@ double calcFunction(double x, double a) {
     double sin2 = pow(sin(ctg), 2);
 
     return sin2;
-}
-
-void printResult(double x, double result) {
-    cout << x << "\t" << result << endl;
 }
 
 void lab8() {
@@ -28,7 +25,7 @@ void lab8() {
 
     while(x <= range[1]) {
         double result = calcFunction(x, a);
-        printResult(x, result);
+        printFormulaResult(x, result);
 
         x += DELTA_X;
     }

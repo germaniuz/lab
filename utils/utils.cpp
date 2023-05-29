@@ -47,3 +47,23 @@ bool isDouble(string v) {
 
     return true;
 }
+
+void printFormulaResult(double x, double result) {
+    cout << x << "\t" << result << endl;
+}
+
+int* createArray(int size) {
+    string userInput;
+    int *arr = new int[size];
+    for (int i = 0; i < size; i++) {
+        cout << "Введите " << i + 1 << "ое число: ";
+        cin >> userInput;
+        while (!isInt(userInput)) {
+            cout << "Неверный формат. Введите число: ";
+            cin >> userInput;
+        }
+        arr[i] = stoi(userInput);
+    }
+
+    return arr;
+}

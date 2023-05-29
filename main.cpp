@@ -1,12 +1,14 @@
 #include <iostream>
 #include <map>
 #include <string>
-#include "options/include/options.h"
-#include "lab5/include/lab5.h"
-#include "lab6/include/lab6.h"
-#include "lab7/include/lab7.h"
-#include "lab8/include/lab8.h"
-#include "utils/include/utils.h"
+#include "options/options.h"
+#include "lab5/lab5.h"
+#include "lab6/lab6.h"
+#include "lab7/lab7.h"
+#include "lab8/lab8.h"
+#include "lab17/lab17.h"
+#include "lab18/lab18.h"
+#include "utils/utils.h"
 
 using namespace std;
 
@@ -17,6 +19,8 @@ int main() {
     modules["lab6"] = &lab6;
     modules["lab7"] = &lab7;
     modules["lab8"] = &lab8;
+    modules["lab17"] = &lab17;
+    modules["lab18"] = &lab18;
     string option;
     int actionInput;
 
