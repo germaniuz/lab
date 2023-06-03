@@ -13,7 +13,7 @@ void lab7() {
     int isDevidedByThree = 0;
 
     int *arr = createArray(SIZE);
-    for (int i; i < SIZE; i++) {
+    for (int i = 0; i < SIZE; i++) {
         if (arr[i] < 0) {
             negativeCount++;
         }

@@ -6,6 +6,8 @@
 #include "lab6/lab6.h"
 #include "lab7/lab7.h"
 #include "lab8/lab8.h"
+#include "lab10/lab10.h"
+#include "lab11/lab11.h"
 #include "lab17/lab17.h"
 #include "lab18/lab18.h"
 #include "utils/utils.h"
@@ -19,6 +21,8 @@ int main() {
     modules["lab6"] = &lab6;
     modules["lab7"] = &lab7;
     modules["lab8"] = &lab8;
+    modules["lab10"] = &lab10;
+    modules["lab11"] = &lab11;
     modules["lab17"] = &lab17;
     modules["lab18"] = &lab18;
     string option;
