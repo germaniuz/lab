@@ -18,6 +18,7 @@ void lab11() {
     string userInput;
     string beforeModifyArr = "[";
     string afterModifyArr = "[";
+    string prefix;
 
     cout << "Введите желаемый размер массива: ";
     cin >> userInput;
@@ -33,7 +34,7 @@ void lab11() {
     int modifiedArr[size];
 
     for (int i = 0; i < size; i++) {
-        string prefix = (i > 0) ? ", " : "";
+        prefix = (i > 0) ? ", " : "";
         beforeModifyArr += prefix + to_string(arr[i]);
         if(pow(arr[i], 2) < 25) {
             modifiedArr[i] = arr[i] * 2;
