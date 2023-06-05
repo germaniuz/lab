@@ -12,6 +12,7 @@
 #include "lab13/lab13.h"
 #include "lab17/lab17.h"
 #include "lab18/lab18.h"
+#include "lab19/lab19.h"
 #include "utils/utils.h"
 
 using namespace std;
@@ -29,6 +30,7 @@ int main() {
     modules["lab13"] = &lab13;
     modules["lab17"] = &lab17;
     modules["lab18"] = &lab18;
+    modules["lab19"] = &lab19;
     string option;
     int actionInput;
 
